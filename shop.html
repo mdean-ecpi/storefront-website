@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Supplies | NurturePath Lactation Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">NurturePath Lactation Services<small>Shop Supplies</small></a>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="consultations.html">Consultations &amp; Services</a></li>
+          <li><a href="shop.html">Shop Supplies</a></li>
+          <li><a href="checkout.html">Checkout <span id="cart-count" class="badge">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="container">
+      <div class="section-head">
+        <p class="tagline">Curated Nursing Supplies</p>
+        <h1>Shop Supplies</h1>
+        <p class="lead">The proposal's sample product data provides complete details for the two items below. These are the concrete sellable items with names, descriptions, prices, images, categories, inventory, and product IDs.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <img class="product-image" src="images/home-consultation.jpg" alt="Illustration representing an in-home lactation consultation">
+          <span class="badge">SRV-001 | Consultations</span>
+          <h2>Initial BSN-RN Lactation Consultation (In-Home)</h2>
+          <p>A comprehensive 90-minute in-home assessment, latch evaluation, and personalized support plan with a BSN-RN.</p>
+          <p class="price">$150.00</p>
+          <p class="meta">Availability: 99 booking slots in the proposal sample data.</p>
+          <button class="button" type="button" onclick="addToCart('Initial BSN-RN Lactation Consultation (In-Home)', 150.00, 'SRV-001')">Book / Add to Cart</button>
+        </article>
+
+        <article class="card">
+          <img class="product-image" src="images/botanical-balm.jpg" alt="Illustration of a two ounce organic botanical nipple balm jar">
+          <span class="badge">ACC-105 | Accessories</span>
+          <h2>Organic Botanical Nipple Balm</h2>
+          <p>2oz jar of organic, baby-safe soothing balm to relieve soreness for nursing mothers.</p>
+          <p class="price">$14.99</p>
+          <p class="meta">Inventory: 45 units in the proposal sample data.</p>
+          <button class="button" type="button" onclick="addToCart('Organic Botanical Nipple Balm', 14.99, 'ACC-105')">Add to Cart</button>
+        </article>
+      </div>
+
+      <div class="notice">
+        <strong>Additional categories in the proposal:</strong> telehealth care, breastfeeding accessories such as pumps and nursing pads, and parental prep. The proposal does not provide individual product records for these additional items, so no invented pricing or product specifications are shown here.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">NurturePath Lactation Services | <a href="consultations.html">Consultations &amp; Services</a> | <a href="checkout.html">Checkout</a></div>
+  </footer>
+
+  <script>
+    function addToCart(name, price, id) {
+      const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      cart.push({ name, price, id });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      localStorage.setItem('cartCount', String(cart.length));
+      document.getElementById('cart-count').textContent = cart.length;
+      alert(name + ' was added to your cart.');
+    }
+    document.getElementById('cart-count').textContent = (JSON.parse(localStorage.getItem('cart') || '[]')).length;
+  </script>
+</body>
+</html>

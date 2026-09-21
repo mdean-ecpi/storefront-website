@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultations &amp; Services | NurturePath Lactation Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header>
+    <div class="nav-wrap">
+      <a class="brand" href="index.html">NurturePath Lactation Services<small>Consultations &amp; Services</small></a>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="consultations.html">Consultations &amp; Services</a></li>
+          <li><a href="shop.html">Shop Supplies</a></li>
+          <li><a href="checkout.html">Checkout <span id="cart-count" class="badge">0</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="container">
+      <div class="section-head">
+        <p class="tagline">BSN-RN Support</p>
+        <h1>Consultations &amp; Services</h1>
+        <p class="lead">Book in-person or telehealth breastfeeding support with a registered nurse. The proposal identifies consultations and services as a core part of the store's business model.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <span class="badge">SRV-001</span>
+          <h2>Initial BSN-RN Lactation Consultation (In-Home)</h2>
+          <p>A comprehensive 90-minute in-home assessment, latch evaluation, and personalized support plan with a BSN-RN.</p>
+          <p class="price">$150.00</p>
+          <p class="meta">Category: Consultations &nbsp; | &nbsp; Availability: 99 booking slots in the proposal sample data</p>
+          <div class="button-row"><a class="button" href="checkout.html?service=SRV-001">Book Now</a></div>
+        </article>
+
+        <article class="card">
+          <span class="badge">Service</span>
+          <h2>Telehealth Care</h2>
+          <p>The proposal includes telehealth consultations as an option for customers seeking breastfeeding guidance with a registered nurse.</p>
+          <p class="meta">The proposal does not provide a sample price, duration, or inventory value for this service.</p>
+          <div class="button-row"><a class="button secondary" href="checkout.html?service=telehealth">Select Telehealth</a></div>
+        </article>
+      </div>
+
+      <div class="notice">
+        <strong>Proposal note:</strong> The proposal also lists “Parental prep” as a product/service type, but it does not provide a sample price, detailed description, image filename, or inventory value. Those details should be added before publishing a complete booking catalog.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">NurturePath Lactation Services | <a href="shop.html">Shop Supplies</a> | <a href="checkout.html">Checkout</a></div>
+  </footer>
+
+  <script>
+    const count = Number(localStorage.getItem('cartCount') || 0);
+    const badge = document.getElementById('cart-count');
+    if (badge) badge.textContent = count;
+  </script>
+</body>
+</html>
