@@ -1,0 +1,57 @@
+/* Brew Haven Coffee Shop - External Stylesheet */
+:root{
+  --dark-coffee-brown:#3B2416;
+  --espresso:#5C4033;
+  --cream:#FFF8E7;
+  --caramel:#C68B59;
+  --white:#FFFFFF;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--dark-coffee-brown);line-height:1.6}
+header{background:var(--dark-coffee-brown);color:var(--white);padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.logo{font-size:1.5rem;font-weight:bold}
+nav a{color:var(--white);text-decoration:none;margin:.25rem .5rem;font-weight:bold}
+nav a:hover,nav a:focus{text-decoration:underline;color:var(--caramel)}
+main{max-width:1100px;margin:auto;padding:2rem 5%}
+.hero{background:var(--espresso);color:var(--white);padding:4rem 2rem;text-align:center;border-radius:14px}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);margin:.2rem 0}
+.btn{display:inline-block;background:var(--caramel);color:var(--dark-coffee-brown);padding:.75rem 1.25rem;border-radius:8px;text-decoration:none;font-weight:bold;border:2px solid var(--caramel);cursor:pointer}
+.btn:hover{background:var(--white)}
+.section-title{text-align:center;margin:2rem 0 1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.25rem}
+.card{background:var(--white);border:1px solid #eadcc9;border-radius:12px;padding:1rem;box-shadow:0 3px 10px #3B24161a}
+.card img{width:100%;height:190px;object-fit:contain;border-radius:8px;background:var(--cream)}
+.price{font-weight:bold;font-size:1.1rem;color:var(--espresso)}
+.form-card{background:var(--white);padding:1.5rem;border-radius:12px;max-width:700px;margin:auto}
+label{display:block;font-weight:bold;margin-top:1rem}
+input,select{width:100%;padding:.7rem;border:1px solid #bca998;border-radius:6px;font-size:1rem}
+table{width:100%;border-collapse:collapse;background:var(--white);margin:1rem 0}
+th,td{padding:.8rem;border:1px solid #d9c8b6;text-align:left}
+th{background:var(--espresso);color:var(--white)}
+footer{text-align:center;background:var(--dark-coffee-brown);color:var(--white);padding:1.5rem;margin-top:2rem}
+.notice{background:#f3e3cf;padding:1rem;border-left:5px solid var(--caramel);border-radius:6px}
+.cart-actions{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+.small{font-size:.9rem;color:var(--espresso)}
+@media(max-width:700px){header{display:block;text-align:center}nav{margin-top:.5rem}.hero{padding:2.5rem 1rem}main{padding:1.25rem 4%}}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;align-items:stretch;}
+.card{display:flex;flex-direction:column;}
+.card .btn{margin-top:auto;}
+.card img{width:100%;height:180px;object-fit:contain;background:#FFF8E7;border-radius:8px;}
+.category{display:inline-block;margin-top:.75rem;font-size:.85rem;font-weight:bold;color:#5C4033;}
+.form-card textarea{width:100%;padding:.7rem;border:1px solid #5C4033;border-radius:5px;box-sizing:border-box;resize:vertical;}
+.form-card input:invalid,.form-card textarea:invalid{border-color:#9b2c2c;}
+.secondary{background:#5C4033;margin-bottom:1rem;}
+.form-message,.error,.success{font-weight:600;min-height:1.2em;}
+.error{color:#9b2c2c;}
+.success{color:#276749;}
+.small{font-size:.85rem;}
+
+/* Network Connection Test */
+.network-card{background:var(--white);padding:1.5rem;border-radius:12px;box-shadow:0 3px 10px #3B24161a;max-width:760px;margin:1rem auto;}
+.network-details{margin:0;}
+.network-details div{display:grid;grid-template-columns:minmax(220px,1fr) 1.5fr;gap:1rem;padding:.9rem 0;border-bottom:1px solid #eadcc9;}
+.network-details div:last-child{border-bottom:0;}
+.network-details dt{font-weight:bold;color:var(--espresso);}
+.network-details dd{margin:0;overflow-wrap:anywhere;}
+@media(max-width:600px){.network-details div{grid-template-columns:1fr;gap:.25rem;}}

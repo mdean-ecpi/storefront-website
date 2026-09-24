@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Network Connection Test | Brew Haven Coffee Shop</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="logo">☕ Brew Haven</div><nav>
+<a href="index.html">Home</a><a href="shop.html">Shop/Menu</a><a href="cart.html">Cart (<span class="cart-count">0</span>)</a><a href="checkout.html">Checkout</a><a href="contact.html">Contact</a><a href="network-test.html">Network Test</a>
+</nav></header>
+<main>
+  <h1>Network Connection Test</h1>
+  <p>This page displays the current browser connection information for the locally running Brew Haven website.</p>
+
+  <section class="network-card" aria-labelledby="network-heading">
+    <h2 id="network-heading">Connection Information</h2>
+    <dl class="network-details">
+      <div><dt>Local Host Name</dt><dd id="local-host-name">Checking...</dd></div>
+      <div><dt>Current Communication Port</dt><dd id="communication-port">Checking...</dd></div>
+      <div><dt>Current Transmission Protocol</dt><dd id="transmission-protocol">Checking...</dd></div>
+      <div><dt>Last Time Launched</dt><dd id="last-launched">Checking...</dd></div>
+    </dl>
+    <p id="network-status" class="notice" role="status">Checking network status...</p>
+  </section>
+</main>
+<footer><p>Brew Haven Coffee Shop</p><p>Network Connection Test</p></footer>
+<script src="script.js"></script>
+</body></html>

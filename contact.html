@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Brew Haven Coffee Shop</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="logo">☕ Brew Haven</div><nav>
+<a href="index.html">Home</a><a href="shop.html">Shop/Menu</a><a href="cart.html">Cart (<span class="cart-count">0</span>)</a><a href="checkout.html">Checkout</a><a href="contact.html">Contact</a><a href="network-test.html">Network Test</a>
+</nav></header>
+<main><h1>Contact Brew Haven</h1><p>Have a question about an order, product, or the Brew Haven menu? Send us a message.</p>
+<div class="form-card"><form id="contact-form" novalidate>
+<label for="contact-name">Full Name</label><input id="contact-name" name="contactName">
+<label for="contact-email">Email Address</label><input id="contact-email" name="contactEmail" type="email" required>
+<label for="contact-subject">Subject</label><input id="contact-subject" name="contactSubject">
+<label for="contact-message">Message</label><textarea id="contact-message" name="contactMessage" rows="7" required></textarea>
+<p id="contact-errors" class="error" role="alert"></p><p id="contact-success" class="success" role="status"></p>
+<button class="btn" type="submit">Send Message</button>
+</form></div></main>
+<footer><p>Brew Haven Coffee Shop</p><p>Fresh drinks, pastries, coffee beans, and merchandise.</p></footer>
+<script src="script.js"></script>
+</body></html>

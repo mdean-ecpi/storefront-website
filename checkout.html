@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout | Brew Haven Coffee Shop</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="logo">☕ Brew Haven</div><nav>
+<a href="index.html">Home</a><a href="shop.html">Shop/Menu</a><a href="cart.html">Cart (<span class="cart-count">0</span>)</a><a href="checkout.html">Checkout</a><a href="contact.html">Contact</a><a href="network-test.html">Network Test</a>
+</nav></header>
+<main><h1>Checkout</h1><div class="form-card">
+<form id="checkout-form" action="confirmation.html" novalidate>
+<h2>Shipping Information</h2>
+<label for="ship-name">Full Name</label><input id="ship-name" name="shipName" required>
+<label for="ship-address">Street Address</label><input id="ship-address" name="shipAddress" required>
+<label for="ship-city">City</label><input id="ship-city" name="shipCity" required>
+<label for="ship-state">State</label><input id="ship-state" name="shipState" required maxlength="2" placeholder="VA">
+<label for="ship-zip">ZIP Code</label><input id="ship-zip" name="shipZip" required inputmode="numeric" placeholder="12345">
+<label for="ship-phone">Phone Number</label><input id="ship-phone" name="shipPhone" required type="tel" placeholder="555-555-5555">
+
+<h2>Purchase Information</h2>
+<label for="card-name">Cardholder Name</label><input id="card-name" name="cardName" required>
+<label for="card-number">Credit Card Number</label><input id="card-number" name="cardNumber" required inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456">
+<label for="expiration">Expiration Date</label><input id="expiration" name="expiration" required type="month">
+<label for="security">Security Code</label><input id="security" name="security" required inputmode="numeric" maxlength="4" placeholder="123">
+<label for="coupon">Coupon Code</label><input id="coupon" name="coupon" placeholder="Try BREW10">
+<button class="btn secondary" type="button" onclick="applyCoupon()">Apply Coupon</button>
+<p id="coupon-message" class="form-message"></p>
+
+<h2>Order Summary</h2><ul id="checkout-summary"></ul><p>Subtotal: <strong id="checkout-subtotal">$0.00</strong></p><p>Discount: <strong id="checkout-discount">$0.00</strong></p><p class="price">Order Total: <span id="checkout-total">$0.00</span></p>
+<p id="checkout-errors" class="error" role="alert"></p>
+<p class="small">This student project does not process real payments. Do not enter real card information.</p>
+<button class="btn" type="submit">Place Order</button>
+</form></div></main>
+<footer><p>Brew Haven Coffee Shop</p><p>Fresh drinks, pastries, coffee beans, and merchandise.</p></footer>
+<script src="script.js"></script>
+</body></html>
